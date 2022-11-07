@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/material.dart';
 
-class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+class notificationView extends StatefulWidget {
+  const notificationView({Key? key}) : super(key: key);
 
   @override
-  State<Login> createState() => _LoginState();
+  State<notificationView> createState() => _notificationViewState();
 }
 
-class _LoginState extends State<Login> {
+class _notificationViewState extends State<notificationView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
