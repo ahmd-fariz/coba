@@ -4,6 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:sekolah_id/core/utils/constant.dart';
 import 'package:intl/intl.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
+import 'package:sekolah_id/core/utils/navigator_helper.dart';
+import 'package:sekolah_id/tugas/tugasView.dart';
+
+import '../core/utils/custom_path.dart';
 
 class dashboardView extends StatefulWidget {
   const dashboardView({Key? key}) : super(key: key);
@@ -74,13 +78,13 @@ class _dashboardViewState extends State<dashboardView> {
                       children: [
                         Text(
                           "Hello,",
-                          style:
-                              TextStyle(color: Color(0xff8D8D8D), fontSize: 23),
+                          style: TextStyle(
+                              color: Color(0xff8D8D8D), fontSize: size / 18),
                         ),
                         Text(
                           "Aqilah Azzahra",
                           style: TextStyle(
-                              fontSize: 23, fontWeight: FontWeight.bold),
+                              fontSize: size / 18, fontWeight: FontWeight.bold),
                         )
                       ],
                     ),
@@ -89,7 +93,7 @@ class _dashboardViewState extends State<dashboardView> {
                       padding: const EdgeInsets.only(top: 10),
                       child: Icon(
                         Icons.account_circle_rounded,
-                        size: 50,
+                        size: size / 7,
                         color: Color(0xff0EB7B0),
                       ),
                     )
@@ -99,11 +103,11 @@ class _dashboardViewState extends State<dashboardView> {
               Container(
                 margin: EdgeInsets.only(top: 15),
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 18),
                   child: Column(children: [
                     Container(
                       padding:
-                          EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                          EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                       height: 90,
                       width: width,
                       decoration: BoxDecoration(
@@ -126,13 +130,13 @@ class _dashboardViewState extends State<dashboardView> {
                                   DateFormat("EEEE, d MMMM yyyy")
                                       .format(DateTime.now()),
                                   style: TextStyle(
-                                      fontSize: 15, color: Colors.white),
+                                      fontSize: size / 28, color: Colors.white),
                                 ),
                                 SizedBox(height: 3),
                                 Text(
                                   "Bahasa Indonesia",
                                   style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: size / 20,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white),
                                 )
@@ -147,14 +151,15 @@ class _dashboardViewState extends State<dashboardView> {
                               children: [
                                 Text("Clock",
                                     style: TextStyle(
-                                        fontSize: 15, color: Colors.white)),
+                                        fontSize: size / 25,
+                                        color: Colors.white)),
                                 SizedBox(height: 3),
                                 Text(
                                   _timeString!,
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: size / 22),
                                 )
                               ],
                             ),
@@ -174,7 +179,7 @@ class _dashboardViewState extends State<dashboardView> {
                                 children: [
                                   Icon(
                                     PhosphorIcons.calendarCheckBold,
-                                    size: 30,
+                                    size: size / 15,
                                     color: Colors.black,
                                   ),
                                   Text("Hadir",
@@ -211,7 +216,7 @@ class _dashboardViewState extends State<dashboardView> {
                         child: Text(
                           "Mata Pelajaran",
                           style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.bold),
+                              fontSize: size / 20, fontWeight: FontWeight.bold),
                         )),
                     Container(
                       child: Row(
@@ -225,7 +230,8 @@ class _dashboardViewState extends State<dashboardView> {
                                   child: Text(
                                     "Materi",
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: 20),
+                                        color: Colors.white,
+                                        fontSize: size / 20),
                                   ),
                                   style: TextButton.styleFrom(
                                       shape: RoundedRectangleBorder(
@@ -244,7 +250,8 @@ class _dashboardViewState extends State<dashboardView> {
                                   child: Text(
                                     "Materi",
                                     style: TextStyle(
-                                        color: Colors.black, fontSize: 20),
+                                        color: Colors.black,
+                                        fontSize: size / 20),
                                   ),
                                   style: TextButton.styleFrom(
                                       shape: RoundedRectangleBorder(
@@ -267,7 +274,8 @@ class _dashboardViewState extends State<dashboardView> {
                                   child: Text(
                                     "Tugas",
                                     style: TextStyle(
-                                        color: Colors.black, fontSize: 20),
+                                        color: Colors.black,
+                                        fontSize: size / 20),
                                   ),
                                   style: TextButton.styleFrom(
                                       shape: RoundedRectangleBorder(
@@ -288,7 +296,8 @@ class _dashboardViewState extends State<dashboardView> {
                                   child: Text(
                                     "Tugas",
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: 20),
+                                        color: Colors.white,
+                                        fontSize: size / 20),
                                   ),
                                   style: TextButton.styleFrom(
                                       shape: RoundedRectangleBorder(
@@ -304,54 +313,67 @@ class _dashboardViewState extends State<dashboardView> {
                     ),
                     SizedBox(height: 20),
                     Container(
+                      height: height / 6.5,
+                      width: width / 1.1,
                       decoration: BoxDecoration(
                           color: primaryColor,
-                          borderRadius: BorderRadius.circular(50)),
-                      width: width,
-                      height: 140,
+                          borderRadius: BorderRadius.circular(20)),
                       child: Stack(children: [
                         Positioned(
-                          top: 0,
-                          right: -1,
-                          child: CustomPaint(
-                            size: Size(
-                                190, (190 * 0.5303867403314917).toDouble()),
-                            painter: RPSCustomPainterTop(),
+                          child: ClipPath(
+                            clipper: CustumPathBottom(),
+                            child: Container(
+                              height: 130,
+                              width: 350,
+                              decoration: BoxDecoration(
+                                  color: Color(0xff00AEA7),
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(20),
+                                      bottomLeft: Radius.circular(20))),
+                            ),
                           ),
                         ),
                         Positioned(
-                            bottom: 0,
+                          child: ClipPath(
+                            clipper: CustumPathTop(),
                             child: Container(
-                              child: CustomPaint(
-                                size: Size(
-                                    130, (130 * 0.4230769230769231).toDouble()),
-                                painter: RPSCustomPainterBottom(),
-                              ),
-                            )),
+                              height: height / 5,
+                              width: width / 1,
+                              decoration: BoxDecoration(
+                                  color: Color(0xff15C0B9),
+                                  borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(20),
+                                      bottomRight: Radius.circular(20))),
+                            ),
+                          ),
+                        ),
                         Positioned(
-                            left: 20,
-                            top: 30,
+                            left: width / 17,
+                            top: height / 55,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
                                   "TIK",
                                   style: TextStyle(
-                                      color: Color(0xffffffff),
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.bold),
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.white),
+                                ),
+                                SizedBox(
+                                  height: 5,
                                 ),
                                 Text(
                                   "Fahmi S.Kom",
                                   style: TextStyle(
-                                      color: Color(0xffffffff),
                                       fontSize: 18,
-                                      fontWeight: FontWeight.w600),
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w500),
                                 )
                               ],
                             ))
                       ]),
-                    )
+                    ),
                   ]),
                 ),
               )
@@ -390,7 +412,7 @@ class RPSCustomPainterTop extends CustomPainter {
         size.width * 1.176796,
         size.height * -0.7220656,
         size.width * 1.176796,
-        size.height * -0.1093750);
+        size.height * 0.1093750);
     path_0.close();
 
     Paint paint_0_fill = Paint()..style = PaintingStyle.fill;

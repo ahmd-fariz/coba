@@ -77,7 +77,7 @@ class _LoginState extends State<Login> {
                         SizedBox(height: 40),
                         TextButton(
                             onPressed: () {
-                              goPush(MainPage());
+                              goRemove(MainPage());
                             },
                             style: TextButton.styleFrom(
                                 shape: RoundedRectangleBorder(
