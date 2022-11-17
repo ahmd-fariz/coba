@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:sekolah_id/core/utils/jadwal_model.dart';
+import 'package:sekolah_id/core/utils/jadwal_modal.dart';
 import '../core/utils/constant.dart';
 import '../core/utils/custom_modal.dart';
 import '../core/utils/navigator_helper.dart';

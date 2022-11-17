@@ -5,6 +5,9 @@ import 'package:sekolah_id/core/utils/constant.dart';
 import 'package:intl/intl.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'package:sekolah_id/core/utils/navigator_helper.dart';
+import 'package:sekolah_id/core/utils/materi_modal.dart';
+import 'package:sekolah_id/core/utils/tugas_modal.dart';
+import 'package:sekolah_id/list-book/mata-pelajaran.dart';
 import 'package:sekolah_id/tugas/tugasView.dart';
 
 import '../core/utils/custom_path.dart';
@@ -200,7 +203,7 @@ class _dashboardViewState extends State<dashboardView> {
                         contentPadding:
                             EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                         hintStyle: TextStyle(color: Color(0xffB7B7B7)),
-                        hintText: 'Cari Mata Pelajaran ....',
+                        hintText: 'Cari Mata Pelajaramn ....',
                         filled: true,
                         fillColor: Colors.white,
                         border: OutlineInputBorder(
@@ -219,65 +222,33 @@ class _dashboardViewState extends State<dashboardView> {
                               fontSize: size / 20, fontWeight: FontWeight.bold),
                         )),
                     Container(
-                      child: Row(
-                        children: [
-                          _index == 0
-                              ? TextButton(
-                                  onPressed: () {
-                                    _index = 0;
-                                    setState(() {});
-                                  },
-                                  child: Text(
-                                    "Materi",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: size / 20),
-                                  ),
-                                  style: TextButton.styleFrom(
+                        child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            TextButton(
+                              onPressed: () {
+                                _index = 0;
+                                setState(() {});
+                              },
+                              child: Text("Materi",
+                                  style: _index == 0
+                                      ? TextStyle(
+                                          color: Colors.white,
+                                          fontSize: size / 20)
+                                      : TextStyle(
+                                          color: Colors.black,
+                                          fontSize: size / 20)),
+                              style: _index == 0
+                                  ? TextButton.styleFrom(
                                       shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(
                                         70,
                                       )),
                                       backgroundColor: primaryColor,
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 40, vertical: 10)),
-                                )
-                              : TextButton(
-                                  onPressed: () {
-                                    _index = 0;
-                                    setState(() {});
-                                  },
-                                  child: Text(
-                                    "Materi",
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: size / 20),
-                                  ),
-                                  style: TextButton.styleFrom(
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(
-                                        70,
-                                      )),
-                                      side: BorderSide(
-                                          width: 2, color: primaryColor),
-                                      backgroundColor: Colors.white,
-                                      padding: EdgeInsets.symmetric(
-                                          horizontal: 40, vertical: 10)),
-                                ),
-                          SizedBox(width: 10),
-                          _index == 0
-                              ? TextButton(
-                                  onPressed: () {
-                                    _index = 1;
-                                    setState(() {});
-                                  },
-                                  child: Text(
-                                    "Tugas",
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: size / 20),
-                                  ),
-                                  style: TextButton.styleFrom(
+                                          horizontal: 40, vertical: 10))
+                                  : TextButton.styleFrom(
                                       shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.circular(
                                         70,
@@ -287,93 +258,54 @@ class _dashboardViewState extends State<dashboardView> {
                                       backgroundColor: Colors.white,
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 42, vertical: 10)),
-                                )
-                              : TextButton(
-                                  onPressed: () {
-                                    _index = 1;
-                                    setState(() {});
-                                  },
-                                  child: Text(
-                                    "Tugas",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: size / 20),
-                                  ),
-                                  style: TextButton.styleFrom(
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(
-                                        70,
-                                      )),
-                                      backgroundColor: primaryColor,
-                                      padding: EdgeInsets.symmetric(
-                                          horizontal: 42, vertical: 10)),
-                                ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 20),
-                    Container(
-                      height: height / 6.5,
-                      width: width / 1.1,
-                      decoration: BoxDecoration(
-                          color: primaryColor,
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Stack(children: [
-                        Positioned(
-                          child: ClipPath(
-                            clipper: CustumPathBottom(),
-                            child: Container(
-                              height: 130,
-                              width: 350,
-                              decoration: BoxDecoration(
-                                  color: Color(0xff00AEA7),
-                                  borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(20),
-                                      bottomLeft: Radius.circular(20))),
                             ),
-                          ),
+                            SizedBox(width: 10),
+                            TextButton(
+                                onPressed: () {
+                                  _index = 1;
+                                  setState(() {});
+                                },
+                                child: Text("Tugas",
+                                    style: _index == 0
+                                        ? TextStyle(
+                                            color: Colors.black,
+                                            fontSize: size / 20)
+                                        : TextStyle(
+                                            color: Colors.white,
+                                            fontSize: size / 20)),
+                                style: _index == 0
+                                    ? TextButton.styleFrom(
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(
+                                          70,
+                                        )),
+                                        side: BorderSide(
+                                            width: 2, color: primaryColor),
+                                        backgroundColor: Colors.white,
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 42, vertical: 10))
+                                    : TextButton.styleFrom(
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(
+                                          70,
+                                        )),
+                                        backgroundColor: primaryColor,
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 40, vertical: 10))),
+                          ],
                         ),
-                        Positioned(
-                          child: ClipPath(
-                            clipper: CustumPathTop(),
-                            child: Container(
-                              height: height / 5,
-                              width: width / 1,
-                              decoration: BoxDecoration(
-                                  color: Color(0xff15C0B9),
-                                  borderRadius: BorderRadius.only(
-                                      topRight: Radius.circular(20),
-                                      bottomRight: Radius.circular(20))),
-                            ),
-                          ),
+                        SizedBox(
+                          height: 20,
                         ),
-                        Positioned(
-                            left: width / 17,
-                            top: height / 55,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "TIK",
-                                  style: TextStyle(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.white),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text(
-                                  "Fahmi S.Kom",
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500),
-                                )
-                              ],
-                            ))
-                      ]),
-                    ),
+                        Container(
+                            height: 300,
+                            child: _index == 0
+                                ? MateriModal()
+                                : TugasModal(
+                                    index: index,
+                                  ))
+                      ],
+                    ))
                   ]),
                 ),
               )

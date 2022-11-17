@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:sekolah_id/core/utils/constant.dart';
 import 'package:sekolah_id/core/utils/navigator_helper.dart';
 import 'package:sekolah_id/profile/personal_info.dart';
+import 'package:sekolah_id/profile/rapot.dart';
 
 import 'nilai_exam.dart';
 
@@ -163,7 +164,9 @@ class _profileViewState extends State<profileView> {
                     child: TextButton(
                         // style: TextButton.styleFrom(
                         //     backgroundColor: Colors.white),
-                        onPressed: () {},
+                        onPressed: () {
+                          goPush(Rapot());
+                        },
                         child: Text(
                           "Rapot",
                           style: TextStyle(

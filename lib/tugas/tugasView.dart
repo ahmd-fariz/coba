@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:sekolah_id/core/utils/constant.dart';
 import 'package:sekolah_id/core/utils/navigator_helper.dart';
+import 'package:sekolah_id/list-book/mata-pelajaran.dart';
 import 'package:sekolah_id/tugas/tugas-indo.dart';
 import 'package:sekolah_id/tugas/tugas-ipa.dart';
 import 'package:sekolah_id/tugas/tugas-mtk.dart';
 import 'package:sekolah_id/tugas/tugas-ppkn.dart';
 
+import '../core/utils/tugas_modal.dart';
+
 class TugasView extends StatefulWidget {
-  const TugasView({super.key});
+  final index;
+  const TugasView({super.key, this.index});
 
   @override
   State<TugasView> createState() => _TugasViewState();
@@ -15,6 +19,7 @@ class TugasView extends StatefulWidget {
 
 class _TugasViewState extends State<TugasView> {
   final List image = [Image.asset("")];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,222 +60,12 @@ class _TugasViewState extends State<TugasView> {
               SizedBox(
                 height: 30,
               ),
-              GestureDetector(
-                onTap: () {
-                  goPush(TugasIndo());
-                },
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                  height: height / 5.6,
-                  width: width / 1.1,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/bg-indo.jpg"),
-                      fit: BoxFit.cover,
-                      colorFilter:
-                          ColorFilter.mode(Colors.black54, BlendMode.darken),
-                    ),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Buatlah Teks Deskripsi",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: size / 20,
-                            fontWeight: FontWeight.w700),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "Bahasa Indonesia",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: size / 30,
-                            fontWeight: FontWeight.w500),
-                      ),
-                      SizedBox(
-                        height: height / 55,
-                      ),
-                      Text(
-                        "7h 90mins",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: size / 30,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ],
-                  ),
+              Container(
+                height: height,
+                child: TugasModal(
+                  index: index,
                 ),
-              ),
-              SizedBox(
-                height: height / 40,
-              ),
-              GestureDetector(
-                onTap: () {
-                  goPush(TugasIpa());
-                },
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                  height: height / 5.6,
-                  width: width / 1.1,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/bg-ipa.jpg"),
-                      fit: BoxFit.cover,
-                      colorFilter:
-                          ColorFilter.mode(Colors.black54, BlendMode.darken),
-                    ),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Sebutkan Organ Tubuh",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: size / 20,
-                            fontWeight: FontWeight.w700),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "Ipa",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: size / 30,
-                            fontWeight: FontWeight.w500),
-                      ),
-                      SizedBox(
-                        height: height / 55,
-                      ),
-                      Text(
-                        "7h 90mins",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: size / 30,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: height / 40,
-              ),
-              GestureDetector(
-                onTap: () {
-                  goPush(TugasPPKN());
-                },
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                  height: height / 5.6,
-                  width: width / 1.1,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/bg-pkn.jpg"),
-                      fit: BoxFit.cover,
-                      colorFilter:
-                          ColorFilter.mode(Colors.black54, BlendMode.darken),
-                    ),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Ancaman Terhadap Negara",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: size / 20,
-                            fontWeight: FontWeight.w700),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "PPKN",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: size / 30,
-                            fontWeight: FontWeight.w500),
-                      ),
-                      SizedBox(
-                        height: height / 55,
-                      ),
-                      Text(
-                        "7h 90mins",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: size / 30,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: height / 40,
-              ),
-              GestureDetector(
-                onTap: () {
-                  goPush(TugasMtk());
-                },
-                child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                  height: height / 5.6,
-                  width: width / 1.1,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/bg-mtk.jpeg"),
-                      fit: BoxFit.cover,
-                      colorFilter:
-                          ColorFilter.mode(Colors.black54, BlendMode.darken),
-                    ),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Baris Aritmatika",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: size / 20,
-                            fontWeight: FontWeight.w700),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "Matematika",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: size / 30,
-                            fontWeight: FontWeight.w500),
-                      ),
-                      SizedBox(
-                        height: height / 55,
-                      ),
-                      Text(
-                        "7h 90mins",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: size / 30,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: height / 40,
-              ),
+              )
             ],
           ),
         ),
