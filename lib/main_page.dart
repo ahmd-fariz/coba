@@ -1,13 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:sekolah_id/dashbaord/dashboard.dart';
+import 'package:sekolah_id/app/modules/dashboard/view/dashboard.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 import 'package:intl/intl.dart';
-import 'package:sekolah_id/list-book/book.dart';
-import 'package:sekolah_id/notification/notification.dart';
-import 'package:sekolah_id/profile/profile.dart';
-import 'package:sekolah_id/spp/spp.dart';
+import 'package:sekolah_id/app/modules/book/view/book.dart';
+import 'package:sekolah_id/app/modules/notification/view/notification.dart';
+import 'package:sekolah_id/app/modules/profile/view/profile.dart';
+import 'package:sekolah_id/app/modules/spp/view/spp.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});

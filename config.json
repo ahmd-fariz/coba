@@ -1,5 +1,7 @@
 {
     "modules": [
-      
+        "list-book/mata_pelajaran",
+        "list-book/jadwal",
+        "list-book/book"
     ]
 }

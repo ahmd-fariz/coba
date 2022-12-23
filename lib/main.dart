@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sekolah_id/core/utils/constant.dart';
-import 'package:sekolah_id/login/login.dart';
-import 'package:sekolah_id/tugas/tugasView.dart';
+import 'package:sekolah_id/app/modules/login/view/login.dart';
+import 'package:sekolah_id/app/modules/tugas/tugasView.dart';
+
+import 'app/core/utils/constant.dart';
 
 void main() {
   runApp(const MyApp());

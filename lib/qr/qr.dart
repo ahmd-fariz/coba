@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
-import 'package:sekolah_id/core/utils/constant.dart';
-import 'package:sekolah_id/core/utils/navigator_helper.dart';
 import 'package:sekolah_id/qr/code-qr.dart';
+
+import '../app/core/utils/constant.dart';
+import '../app/core/utils/navigator_helper.dart';
 
 class qr extends StatefulWidget {
   const qr({super.key});

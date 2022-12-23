@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sekolah_id/core/utils/constant.dart';
 
-import '../core/utils/navigator_helper.dart';
+import '../app/core/utils/constant.dart';
+import '../app/core/utils/navigator_helper.dart';
+
 
 class CodeQr extends StatelessWidget {
   const CodeQr({super.key});
