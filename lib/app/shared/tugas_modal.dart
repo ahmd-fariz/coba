@@ -30,79 +30,73 @@ class _TugasModalState extends State<TugasModal> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: height / 2.70,
-      child: MediaQuery.removePadding(
-        context: context,
-        removeTop: true,
-        child: ListView.builder(
-          itemCount: pages.length,
-          itemBuilder: (BuildContext context, int index) {
-            return Column(
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    goPush(pages[index]);
-                  },
-                  child: Container(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 20,
-                    ),
-                    height: height / 5.5,
-                    // height: 130,
-                    width: width / 1.1,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(tugass[index].image),
-                        fit: BoxFit.cover,
-                        colorFilter:
-                            ColorFilter.mode(Colors.black54, BlendMode.darken),
-                      ),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(padding: EdgeInsets.only(top: 20)),
-                        Text(
-                          tugass[index].judul,
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: size / 20,
-                              fontWeight: FontWeight.w700),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          tugass[index].mapel,
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: size / 30,
-                              fontWeight: FontWeight.w500),
-                        ),
-                        SizedBox(
-                          height: height / 55,
-                        ),
-                        Text(
-                          "7h 90mins",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: size / 30,
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ],
-                    ),
-                  ),
+    return ListView.builder(
+      itemCount: pages.length,
+      shrinkWrap: true,
+      itemBuilder: (BuildContext context, int index) {
+        return Column(
+          children: [
+            GestureDetector(
+              onTap: () {
+                goPush(pages[index]);
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 20,
                 ),
-                SizedBox(
-                  height: 20,
-                )
-              ],
-            );
-          },
-        ),
-      ),
+                height: height / 5.5,
+                // height: 130,
+                width: width / 1.1,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(tugass[index].image),
+                    fit: BoxFit.cover,
+                    colorFilter:
+                        ColorFilter.mode(Colors.black54, BlendMode.darken),
+                  ),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(padding: EdgeInsets.only(top: 20)),
+                    Text(
+                      tugass[index].judul,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: size / 20,
+                          fontWeight: FontWeight.w700),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      tugass[index].mapel,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: size / 30,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    SizedBox(
+                      height: height / 55,
+                    ),
+                    Text(
+                      "7h 90mins",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: size / 30,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            )
+          ],
+        );
+      },
     );
   }
 }
