@@ -31,6 +31,8 @@ class _TugasModalState extends State<TugasModal> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      padding: MediaQuery.of(context).padding.copyWith(top: 0),
+      physics: NeverScrollableScrollPhysics(),
       itemCount: pages.length,
       shrinkWrap: true,
       itemBuilder: (BuildContext context, int index) {

@@ -9,7 +9,6 @@ import '../../core/utils/constant.dart';
 import '../../core/utils/navigator_helper.dart';
 import '../../shared/tugas_modal.dart';
 
-
 class TugasView extends StatefulWidget {
   final index;
   const TugasView({super.key, this.index});
@@ -42,7 +41,7 @@ class _TugasViewState extends State<TugasView> {
               color: Colors.black,
             )),
       ),
-      body: SingleChildScrollView(
+      body: Container(
         child: Padding(
           padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
           child: Column(
@@ -61,10 +60,11 @@ class _TugasViewState extends State<TugasView> {
               SizedBox(
                 height: 30,
               ),
-              Container(
-                height: height,
-                child: TugasModal(
-                  index: index,
+              Expanded(
+                child: SingleChildScrollView(
+                  child: TugasModal(
+                    index: index,
+                  ),
                 ),
               )
             ],

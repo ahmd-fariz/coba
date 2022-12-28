@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sekolah_id/app/modules/materi/mapel-matematika/view/materi-mtk.dart';
 import '../../../../core/utils/constant.dart';
 import '../../../../core/utils/navigator_helper.dart';
 
@@ -63,7 +64,9 @@ class _MapelMtkState extends State<MapelMtk> {
           itemBuilder: (BuildContext context, int index) {
             return Expanded(
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  goPush(MateriMtkView());
+                },
                 child: Container(
                   margin: const EdgeInsets.only(
                     bottom: 10.0,

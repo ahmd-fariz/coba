@@ -30,6 +30,8 @@ class _MateriModalState extends State<MateriModal> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      padding: MediaQuery.of(context).padding.copyWith(top: 0),
+      physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       itemCount: mapel.length,
       itemBuilder: (BuildContext context, int index) {

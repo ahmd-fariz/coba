@@ -22,7 +22,7 @@ class bookView extends StatefulWidget {
 
 class _bookViewState extends State<bookView> {
   @override
-  Widget build(BuildContext context) {  
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -233,7 +233,6 @@ class _bookViewState extends State<bookView> {
                             height: height / 11,
                             width: width / 3,
                             decoration: BoxDecoration(
-                                color: Colors.amber,
                                 image: DecorationImage(
                                   image:
                                       AssetImage("assets/images/bg-indo.jpg"),
@@ -291,7 +290,6 @@ class _bookViewState extends State<bookView> {
                             height: height / 11,
                             width: width / 3,
                             decoration: BoxDecoration(
-                                color: Colors.amber,
                                 image: DecorationImage(
                                   image: AssetImage("assets/images/bg-ipa.jpg"),
                                   fit: BoxFit.cover,

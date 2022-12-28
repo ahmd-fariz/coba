@@ -6,8 +6,6 @@ import '../../../core/utils/constant.dart';
 import '../../../core/utils/navigator_helper.dart';
 import '../../../shared/materi_modal.dart';
 
-
-
 class MataPelajaran extends StatefulWidget {
   const MataPelajaran({super.key});
 
@@ -78,7 +76,7 @@ class _MataPelajaranState extends State<MataPelajaran> {
             SizedBox(
               height: 20,
             ),
-            Expanded(child: MateriModal()),
+            Expanded(child: SingleChildScrollView(child: MateriModal())),
           ],
         ),
       ),
