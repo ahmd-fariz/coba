@@ -88,7 +88,7 @@ class _qrState extends State<qr> {
                       elevation: 0,
                       fixedSize: Size(80, 80),
                       padding: EdgeInsets.all(10),
-                      primary: Colors.white,
+                      backgroundColor: Colors.white,
                       side: BorderSide(color: Colors.black),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12))),
@@ -107,7 +107,7 @@ class _qrState extends State<qr> {
                       elevation: 0,
                       fixedSize: Size(80, 80),
                       padding: EdgeInsets.all(10),
-                      primary: Colors.white,
+                      backgroundColor: Colors.white,
                       side: BorderSide(color: Colors.black),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12))),

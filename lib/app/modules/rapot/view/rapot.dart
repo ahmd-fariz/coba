@@ -298,7 +298,7 @@ class _RapotState extends State<Rapot> {
                                           elevation: 0,
                                           fixedSize: Size(375, 60),
                                           padding: EdgeInsets.all(10),
-                                          primary: Color(0xffEFF8F7),
+                                          backgroundColor: Color(0xffEFF8F7),
                                           side: BorderSide(color: primaryColor),
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
@@ -324,7 +324,7 @@ class _RapotState extends State<Rapot> {
                                           elevation: 0,
                                           fixedSize: Size(375, 60),
                                           padding: EdgeInsets.all(10),
-                                          primary: Color(0xffEFF8F7),
+                                          backgroundColor: Color(0xffEFF8F7),
                                           side: BorderSide(color: primaryColor),
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
@@ -350,7 +350,7 @@ class _RapotState extends State<Rapot> {
                                           elevation: 0,
                                           fixedSize: Size(375, 60),
                                           padding: EdgeInsets.all(10),
-                                          primary: Color(0xffEFF8F7),
+                                          backgroundColor: Color(0xffEFF8F7),
                                           side: BorderSide(color: primaryColor),
                                           shape: RoundedRectangleBorder(
                                               borderRadius:

@@ -23,7 +23,6 @@ class _sppViewState extends State<sppView> {
         return SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            height: height / 1.4,
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
@@ -315,6 +314,7 @@ class _sppViewState extends State<sppView> {
         ),
       ),
       body: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
         child: Container(
           padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
           child: Column(

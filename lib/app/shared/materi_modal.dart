@@ -1,34 +1,42 @@
-import 'package:flutter/Material.dart';
+import 'package:flutter/material.dart';
 
 import '../core/utils/constant.dart';
 import '../core/utils/custom_path.dart';
 import '../modules/materi/mapel-matematika/view/mapel-mtk.dart';
 
 class MateriModal extends StatefulWidget {
-  const MateriModal({super.key});
+  const MateriModal({super.key});  
 
   @override
   State<MateriModal> createState() => _MateriModalState();
 }
 
 class _MateriModalState extends State<MateriModal> {
-  final List mapel = [
+  final List<String> mapel = [
     'Matematika',
     'TIK',
     'IPA',
     'Bahasa Inggris',
     'PPKN',
   ];
-  final List guru = [
-    'yayah, S.pd, S,Kom, S.H, S.Ked ',
+
+  final List<String> guru = [
+    'Yayah, S.pd, S,Kom, S.H, S.Ked',
     'Fahmi S.Kom',
-    'Iqro Negoro S,pd',
-    'Didik Nurul S,pd',
+    'Iqro Negoro S.pd',
+    'Didik Nurul S.pd',
     'Abdul Majid S.pd'
   ];
-  List pages = [MapelMtk()];
+
+  // Pastikan List ini adalah List<Widget>
+  final List<Widget> pages = [MapelMtk()];
+
   @override
   Widget build(BuildContext context) {
+    // Mendapatkan ukuran layar
+    final double width = MediaQuery.of(context).size.width;
+    final double height = MediaQuery.of(context).size.height;
+
     return ListView.builder(
       padding: MediaQuery.of(context).padding.copyWith(top: 0),
       physics: NeverScrollableScrollPhysics(),
@@ -84,24 +92,20 @@ class _MateriModalState extends State<MateriModal> {
                             fontWeight: FontWeight.w600,
                             color: Colors.white),
                       ),
-                      SizedBox(
-                        height: 5,
-                      ),
+                      SizedBox(height: 5),
                       Text(
                         guru[index],
                         style: TextStyle(
                             fontSize: 18,
                             color: Colors.white,
                             fontWeight: FontWeight.w500),
-                      )
+                      ),
                     ],
                   ),
                 ),
               ]),
             ),
-            SizedBox(
-              height: 20,
-            )
+            SizedBox(height: 20),
           ],
         );
       },

@@ -18,6 +18,28 @@ class dashboardView extends StatefulWidget {
   State<dashboardView> createState() => _dashboardViewState();
 }
 
+class TugasModal extends StatelessWidget {
+  final int index;
+  TugasModal({required this.index});
+  
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Text('Tugas $index'),
+    );
+  }
+}
+
+class MateriModal extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Text('Materi'),
+    );
+  }
+}
+
+
 class _dashboardViewState extends State<dashboardView> {
   var _index = 0;
 
@@ -184,7 +206,7 @@ class _dashboardViewState extends State<dashboardView> {
                         style: ElevatedButton.styleFrom(
                             elevation: 0,
                             padding: EdgeInsets.all(10),
-                            primary: Color(0xffFFE458),
+                            backgroundColor: Color(0xffFFE458),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12))),
                         onPressed: () {},

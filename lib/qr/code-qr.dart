@@ -53,7 +53,7 @@ class CodeQr extends StatelessWidget {
                   elevation: 0,
                   fixedSize: Size(250, 55),
                   padding: EdgeInsets.all(10),
-                  primary: primaryColor,
+                  backgroundColor: primaryColor,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12))),
               onPressed: () {

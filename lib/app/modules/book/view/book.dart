@@ -58,7 +58,7 @@ class _bookViewState extends State<bookView> {
                         fontSize: size / 20, fontWeight: FontWeight.w600),
                   ),
                   TextButton(
-                    style: TextButton.styleFrom(primary: Colors.white),
+                    style: TextButton.styleFrom(backgroundColor: Colors.white),
                     onPressed: () {
                       goPush(MataPelajaran());
                     },

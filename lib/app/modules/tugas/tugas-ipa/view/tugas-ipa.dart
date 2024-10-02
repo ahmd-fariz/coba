@@ -125,7 +125,7 @@ class _TugasIpaState extends State<TugasIpa> {
                                 elevation: 0,
                                 fixedSize: Size(width / 1.5, height / 16),
                                 padding: EdgeInsets.all(10),
-                                primary: primaryColor,
+                                backgroundColor: primaryColor,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(12))),
                           ),
@@ -144,7 +144,7 @@ class _TugasIpaState extends State<TugasIpa> {
                                 elevation: 0,
                                 fixedSize: Size(width / 16, height / 16),
                                 padding: EdgeInsets.all(10),
-                                primary: Colors.white,
+                                backgroundColor: Colors.white,
                                 side: BorderSide(color: primaryColor),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(12))),

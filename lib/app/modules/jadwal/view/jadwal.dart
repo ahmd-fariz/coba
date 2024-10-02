@@ -92,7 +92,7 @@ class _JadwalState extends State<Jadwal> {
                               elevation: 0,
                               fixedSize: Size(width / 16, height / 16),
                               padding: EdgeInsets.all(10),
-                              primary: Color(0xffA6F3EB),
+                              backgroundColor: Color(0xffA6F3EB),
                               side: BorderSide(color: Color(0xff0EB7B0)),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15))),
@@ -123,7 +123,7 @@ class _JadwalState extends State<Jadwal> {
                               elevation: 0,
                               fixedSize: Size(width / 16, height / 16),
                               padding: EdgeInsets.all(10),
-                              primary: Color(0xffEFF8F7),
+                              backgroundColor: Color(0xffEFF8F7),
                               side: BorderSide(color: Color(0xff0EB7B0)),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15))),
@@ -158,7 +158,7 @@ class _JadwalState extends State<Jadwal> {
                               elevation: 0,
                               fixedSize: Size(width / 16, height / 16),
                               padding: EdgeInsets.all(10),
-                              primary: Color(0xffA6F3EB),
+                              backgroundColor: Color(0xffA6F3EB),
                               side: BorderSide(color: Color(0xff0EB7B0)),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15))),
@@ -189,7 +189,7 @@ class _JadwalState extends State<Jadwal> {
                               elevation: 0,
                               fixedSize: Size(width / 16, height / 16),
                               padding: EdgeInsets.all(10),
-                              primary: Color(0xffEFF8F7),
+                              backgroundColor: Color(0xffEFF8F7),
                               side: BorderSide(color: Color(0xff0EB7B0)),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15))),
@@ -224,7 +224,7 @@ class _JadwalState extends State<Jadwal> {
                               elevation: 0,
                               fixedSize: Size(width / 16, height / 16),
                               padding: EdgeInsets.all(10),
-                              primary: Color(0xffA6F3EB),
+                              backgroundColor: Color(0xffA6F3EB),
                               side: BorderSide(color: Color(0xff0EB7B0)),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15))),
@@ -255,7 +255,7 @@ class _JadwalState extends State<Jadwal> {
                               elevation: 0,
                               fixedSize: Size(width / 16, height / 16),
                               padding: EdgeInsets.all(10),
-                              primary: Color(0xffEFF8F7),
+                              backgroundColor: Color(0xffEFF8F7),
                               side: BorderSide(color: Color(0xff0EB7B0)),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15))),
@@ -290,7 +290,7 @@ class _JadwalState extends State<Jadwal> {
                               elevation: 0,
                               fixedSize: Size(width / 16, height / 16),
                               padding: EdgeInsets.all(10),
-                              primary: Color(0xffA6F3EB),
+                              backgroundColor: Color(0xffA6F3EB),
                               side: BorderSide(color: Color(0xff0EB7B0)),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15))),
@@ -321,7 +321,7 @@ class _JadwalState extends State<Jadwal> {
                               elevation: 0,
                               fixedSize: Size(width / 16, height / 16),
                               padding: EdgeInsets.all(10),
-                              primary: Color(0xffEFF8F7),
+                              backgroundColor: Color(0xffEFF8F7),
                               side: BorderSide(color: Color(0xff0EB7B0)),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15))),
@@ -356,7 +356,7 @@ class _JadwalState extends State<Jadwal> {
                               elevation: 0,
                               fixedSize: Size(width / 16, height / 16),
                               padding: EdgeInsets.all(10),
-                              primary: Color(0xffA6F3EB),
+                              backgroundColor: Color(0xffA6F3EB),
                               side: BorderSide(color: Color(0xff0EB7B0)),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15))),
@@ -387,7 +387,7 @@ class _JadwalState extends State<Jadwal> {
                               elevation: 0,
                               fixedSize: Size(width / 16, height / 16),
                               padding: EdgeInsets.all(10),
-                              primary: Color(0xffEFF8F7),
+                              backgroundColor: Color(0xffEFF8F7),
                               side: BorderSide(color: Color(0xff0EB7B0)),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15))),

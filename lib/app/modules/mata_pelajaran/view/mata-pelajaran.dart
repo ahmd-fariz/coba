@@ -13,6 +13,15 @@ class MataPelajaran extends StatefulWidget {
   State<MataPelajaran> createState() => _MataPelajaranState();
 }
 
+class MateriModal extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Text('Materi'),
+    );
+  }
+}
+
 final index = 0;
 
 class _MataPelajaranState extends State<MataPelajaran> {

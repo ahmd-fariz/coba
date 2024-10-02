@@ -182,7 +182,7 @@ class _ExamIndoState extends State<ExamIndo> {
                             elevation: 5,
                             fixedSize: Size(115, 55),
                             padding: EdgeInsets.all(10),
-                            primary: Colors.white,
+                            backgroundColor: Colors.white,
                             shadowColor: primaryColor,
                             side: BorderSide(color: primaryColor, width: 1.5),
                             shape: RoundedRectangleBorder(
@@ -202,7 +202,7 @@ class _ExamIndoState extends State<ExamIndo> {
                             elevation: 5,
                             fixedSize: Size(115, 55),
                             padding: EdgeInsets.all(10),
-                            primary: primaryColor,
+                            backgroundColor: primaryColor,
                             shadowColor: primaryColor,
                             side: BorderSide(color: primaryColor, width: 1.5),
                             shape: RoundedRectangleBorder(

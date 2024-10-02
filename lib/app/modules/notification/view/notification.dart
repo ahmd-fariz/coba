@@ -38,6 +38,7 @@ class _notificationViewState extends State<notificationView> {
             )),
       ),
       body: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
         child: Column(
           children: [
             Padding(

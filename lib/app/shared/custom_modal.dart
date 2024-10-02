@@ -69,7 +69,7 @@ AddFile() => showDialog(
                 elevation: 0,
                 fixedSize: Size(270, 50),
                 padding: EdgeInsets.all(10),
-                primary: primaryColor,
+                backgroundColor: primaryColor,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12))),
           ),
